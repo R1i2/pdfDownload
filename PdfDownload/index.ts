@@ -224,12 +224,12 @@ export class PdfDownload implements ComponentFramework.StandardControl<IInputs, 
       
         // Define column styles to control text wrapping
         const columnStyles = {
-          0: { cellWidth: 20 }, // Changed Date
+          0: { cellWidth: 30 }, // Changed Date
           1: { cellWidth: 20 }, // Operation
-          2: { cellWidth: 20 }, // Modified By
+          2: { cellWidth: 30 }, // Modified By
           3: { cellWidth: 50 }, // Logical Name
-          4: { cellWidth: 50 }, // Old Value
-          5: { cellWidth: 50 }, // New Value
+          4: { cellWidth: 30 }, // Old Value
+          5: { cellWidth: 30 }, // New Value
         };
       
         // Custom cell renderer to handle list items
@@ -242,7 +242,7 @@ export class PdfDownload implements ComponentFramework.StandardControl<IInputs, 
           html: '#incident_auditTable',
           columnStyles: columnStyles,
           styles: {
-            overflow: 'linebreak', // Ensure text wraps within the cell
+            overflow: 'hidden', // Ensure text wraps within the cell
             cellPadding: 5, // Add padding to cells
           },
           theme: 'grid', // Use a grid theme for better alignment
